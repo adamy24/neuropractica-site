@@ -580,6 +580,113 @@
     }
 
     /* ============================================
+       PREVIEW SECTION
+       ============================================ */
+    .preview-section {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+
+    .preview-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .case-preview-cards {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .case-card {
+      display: block;
+      max-width: 360px;
+      padding: 32px 24px;
+      border: 1px solid rgba(100, 123, 130, 0.2);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--midnight-blue);
+      text-align: left;
+      transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .case-card:hover {
+      border-color: var(--slate-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(40, 50, 53, 0.1);
+    }
+
+    .case-level {
+      display: inline-block;
+      font-family: var(--font-headline);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--warm-white);
+      background: var(--slate-blue);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    .case-card h3 {
+      font-family: var(--font-headline);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--midnight-blue);
+      margin: 0 0 8px;
+      line-height: 1.35;
+    }
+
+    .case-card p {
+      font-size: 14px;
+      color: var(--slate-blue);
+      margin: 0 0 16px;
+    }
+
+    .case-cta {
+      font-family: var(--font-subheadline);
+      font-style: italic;
+      font-size: 15px;
+      color: var(--slate-blue);
+      transition: color 0.2s ease;
+    }
+
+    .case-card:hover .case-cta {
+      color: var(--midnight-blue);
+    }
+
+    /* ============================================
+       APP STORE LINKS (hidden until available)
+       ============================================ */
+    .app-store-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 24px;
+    }
+
+    .store-badge {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 24px;
+      border: 1px solid rgba(100, 123, 130, 0.2);
+      border-radius: 4px;
+      color: var(--slate-blue);
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    .store-badge:hover {
+      background: var(--slate-blue);
+      color: var(--warm-white);
+    }
+
+    /* ============================================
        FOOTER
        ============================================ */
     .footer {
@@ -684,6 +791,10 @@
         font-size: 12px;
         padding: 10px 18px;
       }
+
+      .case-card {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -709,6 +820,12 @@
         <div class="hero-actions">
           <a href="#signup" class="btn-primary">Sign Up for Beta</a>
           <a href="#how" class="btn-secondary">See How It Works ↓</a>
+        </div>
+
+        <!-- App store links — unhide and update hrefs when available -->
+        <div class="app-store-links" style="display: none;" id="app-store-links">
+          <a href="#" id="ios-download" class="store-badge">Download on the App Store</a>
+          <a href="#" id="android-download" class="store-badge">Get it on Google Play</a>
         </div>
       </div>
     </div>
@@ -809,6 +926,29 @@
     </div>
   </section>
 
+  <!-- PREVIEW -->
+  <section class="preview-section" id="preview">
+    <div class="container">
+      <div class="preview-header reveal">
+        <p class="section-eyebrow">Preview</p>
+        <h2 class="section-title">See What a Case Looks Like</h2>
+        <p class="section-subtitle">Each case presents a real clinical scenario with decision points, expert feedback, and reasoning walkthroughs. Here's a sample:</p>
+      </div>
+
+      <div class="case-preview-cards reveal">
+        <a href="https://YOUR_API_DOMAIN/public/cases/np_l1_bellpalsy_001" class="case-card" target="_blank" rel="noopener">
+          <span class="case-level">Foundational</span>
+          <h3>A 45-Year-Old with Acute Facial Weakness</h3>
+          <p>5 clinical decisions &middot; Neuromuscular &middot; ~8 min</p>
+          <span class="case-cta">Preview Case &rarr;</span>
+        </a>
+        <!-- Add more cards here as you create more cases -->
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><div class="section-divider"></div></div>
+
   <!-- BETA CTA -->
   <section class="beta-cta" id="signup">
     <div class="container">
@@ -860,21 +1000,48 @@
 
     revealElements.forEach(el => observer.observe(el));
 
-    // Form handling (placeholder — you'll wire this to Resend later)
-    document.getElementById('signupForm').addEventListener('submit', function(e) {
+    // Beta signup form — POSTs to API backend
+    // Replace YOUR_API_DOMAIN with production API URL when deployed
+    const API_URL = 'https://YOUR_API_DOMAIN';
+
+    document.getElementById('signupForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      const email = this.querySelector('input').value;
-      
-      // TODO: Replace with actual Resend API call or form endpoint
-      // For now, store in localStorage as a temporary measure
-      const emails = JSON.parse(localStorage.getItem('beta_signups') || '[]');
-      emails.push({ email, timestamp: new Date().toISOString() });
-      localStorage.setItem('beta_signups', JSON.stringify(emails));
-      
-      // Show success
-      this.style.display = 'none';
-      document.querySelector('.signup-note').style.display = 'none';
-      document.getElementById('signupSuccess').style.display = 'block';
+      const input = this.querySelector('input');
+      const btn = this.querySelector('button');
+      const email = input.value.trim();
+      if (!email) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Signing up...';
+
+      try {
+        const response = await fetch(API_URL + '/beta/signup', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email, source: 'landing_page' }),
+        });
+
+        if (response.ok) {
+          this.style.display = 'none';
+          document.querySelector('.signup-note').style.display = 'none';
+          document.getElementById('signupSuccess').style.display = 'block';
+        } else {
+          throw new Error('Request failed');
+        }
+      } catch (error) {
+        // On error, fall back to localStorage so signup isn't lost
+        const emails = JSON.parse(localStorage.getItem('beta_signups') || '[]');
+        emails.push({ email, timestamp: new Date().toISOString() });
+        localStorage.setItem('beta_signups', JSON.stringify(emails));
+
+        // Still show success — don't penalize the user for an API issue
+        this.style.display = 'none';
+        document.querySelector('.signup-note').style.display = 'none';
+        document.getElementById('signupSuccess').style.display = 'block';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Join Beta';
+      }
     });
   </script>
 
