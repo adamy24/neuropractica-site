@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — NeuroPractica</title>
+  <meta name="description" content="NeuroPractica privacy policy. What we collect, how we use it, and your rights.">
+  <meta property="og:title" content="Privacy Policy — NeuroPractica">
+  <meta property="og:description" content="NeuroPractica privacy policy. What we collect, how we use it, and your rights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neuropractica.org/privacy">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       BRAND TOKENS
+       ============================================ */
+    :root {
+      --slate-blue: #647B82;
+      --midnight-blue: #283235;
+      --warm-black: #0C0C0A;
+      --warm-white: #F9F9F7;
+      --soft-moss: #475548;
+
+      --slate-blue-light: #7a949c;
+      --midnight-blue-light: #3a4a4e;
+      --slate-blue-10: rgba(100, 123, 130, 0.10);
+      --slate-blue-05: rgba(100, 123, 130, 0.05);
+
+      --font-headline: 'Montserrat', sans-serif;
+      --font-subheadline: 'Noto Serif', serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--warm-black);
+      background: var(--warm-white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================
+       UTILITY
+       ============================================ */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(249, 249, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(100, 123, 130, 0.12);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 1px 8px rgba(12, 12, 10, 0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+    }
+
+    .nav-logo span {
+      color: var(--slate-blue);
+    }
+
+    .nav-cta {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--warm-white);
+      background: var(--midnight-blue);
+      padding: 10px 24px;
+      border-radius: 4px;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--slate-blue);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================
+       PRIVACY POLICY CONTENT
+       ============================================ */
+    .policy-page {
+      padding: 140px 0 80px;
+    }
+
+    .policy-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .policy-content h1 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .policy-meta {
+      font-size: 14px;
+      color: var(--slate-blue);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .policy-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      margin-bottom: 16px;
+    }
+
+    .policy-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--slate-blue);
+      opacity: 0.3;
+      margin: 40px 0;
+    }
+
+    .policy-content h2 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      margin-bottom: 20px;
+    }
+
+    .policy-content h3 {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .policy-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .policy-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--slate-blue);
+      opacity: 0.5;
+    }
+
+    .policy-content strong {
+      color: var(--midnight-blue);
+      font-weight: 600;
+    }
+
+    .policy-content a {
+      color: var(--slate-blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.2s ease;
+    }
+
+    .policy-content a:hover {
+      color: var(--midnight-blue);
+    }
+
+    .policy-content em {
+      font-family: var(--font-subheadline);
+      font-style: italic;
+      color: var(--midnight-blue-light);
+    }
+
+    /* Table */
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+
+    .policy-table th {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 2px solid rgba(100, 123, 130, 0.2);
+    }
+
+    .policy-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(100, 123, 130, 0.1);
+      color: var(--midnight-blue-light);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .policy-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: 48px 0;
+      border-top: 1px solid rgba(100, 123, 130, 0.12);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-link {
+      font-size: 13px;
+      color: var(--slate-blue);
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--midnight-blue);
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--slate-blue);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 600px) {
+      .policy-page {
+        padding: 120px 0 60px;
+      }
+
+      .policy-table {
+        font-size: 13px;
+      }
+
+      .policy-table th,
+      .policy-table td {
+        padding: 10px 10px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">Neuro<span>Practica</span></a>
+      <a href="/#signup" class="nav-cta">Join the Beta</a>
+    </div>
+  </nav>
+
+  <!-- PRIVACY POLICY -->
+  <main class="policy-page">
+    <div class="container">
+      <div class="policy-content">
+
+        <h1>Privacy Policy</h1>
+        <p class="policy-meta"><strong>Effective Date:</strong> February 17, 2026<br><strong>Last Updated:</strong> February 17, 2026</p>
+        <p class="policy-intro">NeuroPractica ("we," "us," or "our") operates the NeuroPractica mobile application and website (neuropractica.org). This privacy policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+        <p class="policy-intro">We believe in plain language. This policy is meant to be read and understood — not buried in legalese.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>What We Collect</h2>
+
+        <h3>Account Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+          <li><strong>Email address</strong> — used for login, account recovery, and transactional emails (like subscription receipts)</li>
+          <li><strong>Name</strong> — provided by Google or Apple when you sign in with those services</li>
+          <li><strong>Authentication provider</strong> — whether you signed in with Google, Apple, or email (magic link)</li>
+        </ul>
+
+        <h3>Profile Information</h3>
+        <p>During onboarding and in your settings, you may provide:</p>
+        <ul>
+          <li><strong>Training stage</strong> — such as medical student, resident year, or nurse practitioner</li>
+          <li><strong>Learning goals</strong> — your self-selected focus areas</li>
+          <li><strong>Timezone and preferred daily case time</strong> — used to schedule your daily case reminder</li>
+          <li><strong>Subspecialty preferences</strong> — topics you want to focus on</li>
+        </ul>
+        <p>All profile information is optional except training stage, which helps us recommend an appropriate starting difficulty level.</p>
+
+        <h3>Learning Data</h3>
+        <p>As you use NeuroPractica, we collect:</p>
+        <ul>
+          <li><strong>Case attempts</strong> — which cases you started, completed, or left incomplete</li>
+          <li><strong>Your responses</strong> — the options you selected on each decision step</li>
+          <li><strong>Scores and performance</strong> — how you performed on each case</li>
+          <li><strong>Weakness patterns</strong> — areas where you frequently miss questions, used to personalize your experience</li>
+          <li><strong>Case ratings and feedback</strong> — your optional ratings and comments on cases</li>
+        </ul>
+        <p>This data powers our personalization engine, which selects cases tailored to strengthen your weak areas. We do not share your individual learning data with anyone — not employers, not training programs, not other users.</p>
+
+        <h3>Payment Information</h3>
+        <p>If you subscribe to NeuroPractica Advanced, payment is processed entirely by <strong>Stripe</strong>. We do not store your credit card number, bank account details, or other payment credentials on our servers. We receive only:</p>
+        <ul>
+          <li>Subscription status (active, trial, canceled)</li>
+          <li>Billing cycle dates</li>
+          <li>A Stripe customer identifier</li>
+        </ul>
+        <p>For Stripe's own privacy practices, see <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe's Privacy Policy</a>.</p>
+
+        <h3>Device Information</h3>
+        <p>If you enable push notifications, we store:</p>
+        <ul>
+          <li><strong>Device token</strong> — a unique identifier provided by Apple (APNs) or Google (FCM) to deliver notifications to your device</li>
+        </ul>
+        <p>We do not collect device identifiers, hardware information, or location data.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>How We Use Your Information</h2>
+        <p>We use your information to:</p>
+        <ul>
+          <li><strong>Operate the app</strong> — authenticate you, save your progress, deliver cases</li>
+          <li><strong>Personalize your learning</strong> — select daily cases targeting your weaknesses, track your improvement over time</li>
+          <li><strong>Send transactional communications</strong> — magic link emails, subscription receipts, daily case reminders (if enabled)</li>
+          <li><strong>Improve the product</strong> — aggregate, anonymized usage patterns help us understand which features are working and where cases need improvement</li>
+        </ul>
+        <p>We do <strong>not</strong>:</p>
+        <ul>
+          <li>Sell your personal information to anyone</li>
+          <li>Share your individual learning performance with third parties</li>
+          <li>Use your data for advertising</li>
+          <li>Train AI models on your personal data</li>
+        </ul>
+
+        <div class="policy-divider"></div>
+
+        <h2>Third-Party Services</h2>
+        <p>We use the following third-party services to operate NeuroPractica:</p>
+        <table class="policy-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Purpose</th>
+              <th>What They Receive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Google Sign-In</strong></td>
+              <td>Authentication</td>
+              <td>Your Google account email and name (when you choose to sign in with Google)</td>
+            </tr>
+            <tr>
+              <td><strong>Apple Sign-In</strong></td>
+              <td>Authentication</td>
+              <td>Your Apple ID email and name (when you choose to sign in with Apple)</td>
+            </tr>
+            <tr>
+              <td><strong>Stripe</strong></td>
+              <td>Payment processing</td>
+              <td>Payment details you enter during checkout</td>
+            </tr>
+            <tr>
+              <td><strong>Resend</strong></td>
+              <td>Transactional email delivery</td>
+              <td>Your email address and message content (magic links, receipts)</td>
+            </tr>
+            <tr>
+              <td><strong>Firebase Cloud Messaging / APNs</strong></td>
+              <td>Push notifications</td>
+              <td>Your device token and notification content</td>
+            </tr>
+            <tr>
+              <td><strong>Railway</strong></td>
+              <td>Cloud hosting</td>
+              <td>All data stored in our database (encrypted at rest and in transit)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Each of these services has their own privacy policy. We only share the minimum information necessary for each service to function.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>Data Retention</h2>
+        <ul>
+          <li><strong>Active accounts</strong> — We retain your data for as long as your account is active.</li>
+          <li><strong>Account deletion</strong> — You can delete your account at any time from the Settings screen. Deletion is a soft delete with a 7-day recovery window, after which your data is permanently removed.</li>
+          <li><strong>Incomplete case data</strong> — Abandoned case attempts are retained so you can resume them. You can discard incomplete cases at any time.</li>
+          <li><strong>Subscription data</strong> — Billing records are retained as required for tax and legal compliance, even after account deletion.</li>
+        </ul>
+
+        <div class="policy-divider"></div>
+
+        <h2>Data Security</h2>
+        <p>We take reasonable measures to protect your information:</p>
+        <ul>
+          <li>All data transmitted between the app and our servers is encrypted using TLS (HTTPS)</li>
+          <li>Database access is restricted and encrypted at rest</li>
+          <li>Authentication tokens expire and are refreshed regularly</li>
+          <li>Admin access to production systems requires separate credentials with short-lived sessions</li>
+        </ul>
+        <p>No system is 100% secure. If you believe your account has been compromised, contact us immediately.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li><strong>Access your data</strong> — View your profile, learning history, and performance data within the app</li>
+          <li><strong>Correct your data</strong> — Update your profile information at any time in Settings</li>
+          <li><strong>Delete your data</strong> — Delete your account and all associated data from Settings</li>
+          <li><strong>Opt out of notifications</strong> — Disable push notifications or daily reminders at any time</li>
+        </ul>
+        <p>If you are located in the European Economic Area (EEA), United Kingdom, or California, you may have additional rights under GDPR or CCPA. Contact us to exercise these rights.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>Children's Privacy</h2>
+        <p>NeuroPractica is designed for medical professionals and students. We do not knowingly collect information from anyone under the age of 16. If we learn that we have collected data from someone under 16, we will delete it promptly.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. When we do, we will update the "Last Updated" date at the top and, for significant changes, notify you through the app or by email.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy or your data, contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:privacy@neuropractica.org">privacy@neuropractica.org</a><br>
+        <strong>Website:</strong> <a href="https://neuropractica.org">neuropractica.org</a></p>
+
+        <div class="policy-divider"></div>
+
+        <p><em>NeuroPractica is operated by Adam Rizvi, MD. This privacy policy applies to the NeuroPractica mobile application (iOS and Android) and the NeuroPractica website (neuropractica.org).</em></p>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">NeuroPractica</div>
+      <div class="footer-links">
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
+        <span class="footer-copy">&copy; 2026 NeuroPractica. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>

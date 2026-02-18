@@ -709,6 +709,22 @@
       color: var(--midnight-blue);
     }
 
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-link {
+      font-size: 13px;
+      color: var(--slate-blue);
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--midnight-blue);
+    }
+
     .footer-copy {
       font-size: 13px;
       color: var(--slate-blue);
@@ -974,7 +990,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">NeuroPractica</div>
-      <p class="footer-copy">&copy; 2026 NeuroPractica. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
+        <span class="footer-copy">&copy; 2026 NeuroPractica. All rights reserved.</span>
+      </div>
     </div>
   </footer>
 
