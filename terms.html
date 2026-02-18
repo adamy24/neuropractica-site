@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — NeuroPractica</title>
+  <meta name="description" content="NeuroPractica terms of service. Usage terms, subscriptions, and your rights.">
+  <meta property="og:title" content="Terms of Service — NeuroPractica">
+  <meta property="og:description" content="NeuroPractica terms of service. Usage terms, subscriptions, and your rights.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://neuropractica.org/terms">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;1,400&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       BRAND TOKENS
+       ============================================ */
+    :root {
+      --slate-blue: #647B82;
+      --midnight-blue: #283235;
+      --warm-black: #0C0C0A;
+      --warm-white: #F9F9F7;
+      --soft-moss: #475548;
+
+      --slate-blue-light: #7a949c;
+      --midnight-blue-light: #3a4a4e;
+      --slate-blue-10: rgba(100, 123, 130, 0.10);
+      --slate-blue-05: rgba(100, 123, 130, 0.05);
+
+      --font-headline: 'Montserrat', sans-serif;
+      --font-subheadline: 'Noto Serif', serif;
+      --font-body: 'Open Sans', sans-serif;
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--warm-black);
+      background: var(--warm-white);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================
+       UTILITY
+       ============================================ */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(249, 249, 247, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(100, 123, 130, 0.12);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 1px 8px rgba(12, 12, 10, 0.06);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+    }
+
+    .nav-logo span {
+      color: var(--slate-blue);
+    }
+
+    .nav-cta {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--warm-white);
+      background: var(--midnight-blue);
+      padding: 10px 24px;
+      border-radius: 4px;
+      transition: background 0.25s ease, transform 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--slate-blue);
+      transform: translateY(-1px);
+    }
+
+    /* ============================================
+       POLICY CONTENT
+       ============================================ */
+    .policy-page {
+      padding: 140px 0 80px;
+    }
+
+    .policy-content {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .policy-content h1 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .policy-meta {
+      font-size: 14px;
+      color: var(--slate-blue);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .policy-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      margin-bottom: 16px;
+    }
+
+    .policy-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--slate-blue);
+      opacity: 0.3;
+      margin: 40px 0;
+    }
+
+    .policy-content h2 {
+      font-family: var(--font-headline);
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      margin-bottom: 20px;
+    }
+
+    .policy-content h3 {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+      margin-top: 28px;
+      margin-bottom: 12px;
+    }
+
+    .policy-content p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 16px;
+    }
+
+    .policy-content ul li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--midnight-blue-light);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .policy-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--slate-blue);
+      opacity: 0.5;
+    }
+
+    .policy-content strong {
+      color: var(--midnight-blue);
+      font-weight: 600;
+    }
+
+    .policy-content a {
+      color: var(--slate-blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.2s ease;
+    }
+
+    .policy-content a:hover {
+      color: var(--midnight-blue);
+    }
+
+    .policy-content em {
+      font-family: var(--font-subheadline);
+      font-style: italic;
+      color: var(--midnight-blue-light);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: 48px 0;
+      border-top: 1px solid rgba(100, 123, 130, 0.12);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-brand {
+      font-family: var(--font-headline);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--midnight-blue);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-link {
+      font-size: 13px;
+      color: var(--slate-blue);
+      transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+      color: var(--midnight-blue);
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--slate-blue);
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 600px) {
+      .policy-page {
+        padding: 120px 0 60px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">Neuro<span>Practica</span></a>
+      <a href="/#signup" class="nav-cta">Join the Beta</a>
+    </div>
+  </nav>
+
+  <!-- TERMS OF SERVICE -->
+  <main class="policy-page">
+    <div class="container">
+      <div class="policy-content">
+
+        <h1>Terms of Service</h1>
+        <p class="policy-meta"><strong>Effective Date:</strong> February 17, 2026<br><strong>Last Updated:</strong> February 17, 2026</p>
+        <p class="policy-intro">Welcome to NeuroPractica. By using our mobile application or website (neuropractica.org), you agree to these terms. Please read them carefully.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>1. What NeuroPractica Is</h2>
+        <p>NeuroPractica is an educational tool designed to build clinical reasoning skills through interactive, case-based learning. It is intended for medical professionals and students.</p>
+        <p>NeuroPractica is <strong>not</strong> a medical reference, diagnostic tool, or substitute for clinical judgment. Cases are designed for educational purposes only. Do not use NeuroPractica content to make real patient care decisions.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>2. Accounts</h2>
+        <p>You must create an account to use NeuroPractica. You can sign in with Google, Apple, or email (magic link).</p>
+        <p>You are responsible for maintaining the security of your account. If you believe your account has been compromised, contact us immediately at <a href="mailto:support@neuropractica.org">support@neuropractica.org</a>.</p>
+        <p>You must be at least 16 years old to use NeuroPractica.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>3. Subscription Tiers</h2>
+        <p>NeuroPractica offers two tiers:</p>
+        <ul>
+          <li><strong>Core (Free)</strong> — Access to Level 1 cases with personalization.</li>
+          <li><strong>Advanced (Paid)</strong> — Full access to all case levels, analytics, case history, and bookmarks.</li>
+        </ul>
+        <p>Advanced subscriptions include a 7-day free trial with payment information required upfront. After the trial, you will be charged automatically unless you cancel. You can cancel anytime from your account settings or through your app store.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>4. Payments and Billing</h2>
+        <p>Payments are processed by Stripe. By subscribing, you agree to <a href="https://stripe.com/legal" target="_blank" rel="noopener">Stripe's terms of service</a>.</p>
+        <p>Subscriptions renew automatically at the end of each billing cycle (monthly or annual). You can switch between monthly and annual billing or cancel at any time.</p>
+        <p>Refunds are handled on a case-by-case basis. Contact <a href="mailto:support@neuropractica.org">support@neuropractica.org</a> for refund requests.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>5. Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Share your account credentials with others</li>
+          <li>Attempt to access other users' data</li>
+          <li>Reverse engineer, scrape, or reproduce NeuroPractica's case content</li>
+          <li>Use NeuroPractica for any unlawful purpose</li>
+          <li>Interfere with the operation of the service</li>
+        </ul>
+
+        <div class="policy-divider"></div>
+
+        <h2>6. Intellectual Property</h2>
+        <p>All case content, educational materials, scoring algorithms, and personalization logic are the property of NeuroPractica. You may not reproduce, distribute, or create derivative works from NeuroPractica content without written permission.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>7. Account Deletion</h2>
+        <p>You can delete your account at any time from the Settings screen. Account deletion is a soft delete with a 7-day recovery window. After 7 days, your data is permanently removed.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>8. Disclaimers</h2>
+        <p>NeuroPractica is provided "as is" without warranties of any kind, express or implied. We do not guarantee that:</p>
+        <ul>
+          <li>The service will be uninterrupted or error-free</li>
+          <li>Case content is free from errors (though we strive for clinical accuracy)</li>
+          <li>Use of NeuroPractica will result in any particular educational outcome</li>
+        </ul>
+
+        <div class="policy-divider"></div>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, NeuroPractica and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the service.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>10. Changes to These Terms</h2>
+        <p>We may update these terms from time to time. When we do, we will update the "Last Updated" date at the top. Continued use of NeuroPractica after changes constitutes acceptance of the updated terms.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>11. Governing Law</h2>
+        <p>These terms are governed by the laws of the State of California, United States.</p>
+
+        <div class="policy-divider"></div>
+
+        <h2>12. Contact</h2>
+        <p>If you have questions about these terms, contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@neuropractica.org">support@neuropractica.org</a><br>
+        <strong>Website:</strong> <a href="https://neuropractica.org">neuropractica.org</a></p>
+
+        <div class="policy-divider"></div>
+
+        <p><em>NeuroPractica is operated by Adam Rizvi, MD.</em></p>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">NeuroPractica</div>
+      <div class="footer-links">
+        <a href="/privacy" class="footer-link">Privacy Policy</a>
+        <a href="/terms" class="footer-link">Terms of Service</a>
+        <span class="footer-copy">&copy; 2026 NeuroPractica. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
+
+</body>
+</html>
