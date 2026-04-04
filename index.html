@@ -838,11 +838,7 @@
           <a href="#how" class="btn-secondary">See How It Works ↓</a>
         </div>
 
-        <!-- App store links — unhide and update hrefs when available -->
-        <div class="app-store-links" style="display: none;" id="app-store-links">
-          <a href="#" id="ios-download" class="store-badge">Download on the App Store</a>
-          <a href="#" id="android-download" class="store-badge">Get it on Google Play</a>
-        </div>
+        <p style="color: #647B82; font-size: 0.95rem; margin-top: 1rem;">Coming soon to iOS and Android</p>
       </div>
     </div>
   </section>
@@ -942,26 +938,6 @@
     </div>
   </section>
 
-  <!-- PREVIEW -->
-  <section class="preview-section" id="preview">
-    <div class="container">
-      <div class="preview-header reveal">
-        <p class="section-eyebrow">Preview</p>
-        <h2 class="section-title">See What a Case Looks Like</h2>
-        <p class="section-subtitle">Each case presents a real clinical scenario with decision points, expert feedback, and reasoning walkthroughs. Here's a sample:</p>
-      </div>
-
-      <div class="case-preview-cards reveal">
-        <a href="https://YOUR_API_DOMAIN/public/cases/np_l1_bellpalsy_001" class="case-card" target="_blank" rel="noopener">
-          <span class="case-level">Foundational</span>
-          <h3>A 45-Year-Old with Acute Facial Weakness</h3>
-          <p>5 clinical decisions &middot; Neuromuscular &middot; ~8 min</p>
-          <span class="case-cta">Preview Case &rarr;</span>
-        </a>
-        <!-- Add more cards here as you create more cases -->
-      </div>
-    </div>
-  </section>
 
   <div class="container"><div class="section-divider"></div></div>
 
@@ -993,6 +969,7 @@
       <div class="footer-links">
         <a href="/privacy" class="footer-link">Privacy Policy</a>
         <a href="/terms" class="footer-link">Terms of Service</a>
+        <span style="font-size: 12px; color: var(--slate-blue);">Created by a board-certified neurologist and neurointensivist.</span>
         <span class="footer-copy">&copy; 2026 NeuroPractica. All rights reserved.</span>
       </div>
     </div>
@@ -1022,7 +999,7 @@
 
     // Beta signup form — POSTs to API backend
     // Replace YOUR_API_DOMAIN with production API URL when deployed
-    const API_URL = 'https://YOUR_API_DOMAIN';
+    const API_URL = 'https://api.neuropractica.org';
 
     document.getElementById('signupForm').addEventListener('submit', async function(e) {
       e.preventDefault();
